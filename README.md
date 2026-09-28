@@ -33,7 +33,7 @@ Mac 開啟 FileVault 後，每次冷啟動都要在解鎖畫面手動輸入密�
 
 ## 設定
 
-1. 用 Arduino IDE 開啟 `unlock_kb.ino`，確認設定區為測試模式
+1. 用 Arduino IDE 開啟 `esp32-mac-autounlock.ino`，確認設定區為測試模式
    （只送假字元 `abc`，不送 Enter）：
 ```cpp
    #define TEST_MODE   1
@@ -76,7 +76,7 @@ ESP32 開機後 5 秒內按一下 BOOT 鍵，會進入配對模式，可綁定�
 - Mac 已登入時，若 ESP32 斷線超過 `MIN_DOWN_MS` 後重連，同樣會輸入密碼，
   請視使用習慣調整此參數。
 - 密碼以美式鍵盤按鍵碼送出，Mac 若使用其他鍵盤配置，特殊符號可能對不上。
-- 密碼直接寫在 `unlock_kb.ino` 中，**提交前請確認 `PASSWORD` 為 `CHANGE_ME`**。
+- 密碼直接寫在 `esp32-mac-autounlock.ino` 中，**提交前請確認 `PASSWORD` 為 `CHANGE_ME`**。
   若密碼曾被 commit，請直接更換 Mac 登入密碼。
 
 ## 授權
